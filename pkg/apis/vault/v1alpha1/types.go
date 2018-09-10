@@ -54,9 +54,12 @@ type VaultServiceSpec struct {
 	// Number of nodes to deploy for a Vault deployment.
 	// Default: 1.
 	Nodes int32 `json:"nodes,omitempty"`
-
+	
 	// Base image to use for a Vault deployment.
 	BaseImage string `json:"baseImage"`
+	
+	// Custom etcd image to override default of 'quay.io/coreos/etcd'
+	EtcdRepository string `json:"etcdRepository"`
 
 	// Version of Vault to be deployed.
 	Version string `json:"version"`
